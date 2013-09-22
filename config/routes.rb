@@ -1,4 +1,6 @@
 Practice::Application.routes.draw do
+  resources :table2s
+
   get "home/index"
   resources :tables
 

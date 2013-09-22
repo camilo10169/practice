@@ -1,0 +1,29 @@
+<h1>Listing table2s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Code</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @table2s.each do |table2| %>
+      <tr>
+        <td><%= table2.name %></td>
+        <td><%= table2.code %></td>
+        <td><%= link_to 'Show', table2 %></td>
+        <td><%= link_to 'Edit', edit_table2_path(table2) %></td>
+        <td><%= link_to 'Destroy', table2, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Table2', new_table2_path %>
